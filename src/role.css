@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/*权限样式start (放在一个名字为permissionsOfDetails的div中,可更改)*/
+.permissionsOfDetails table {
+    width: 99%;
+    border-top: 1px solid #e7e9f1;
+    border-left: 1px solid #e7e9f1;
+    border-collapse: collapse;
+    word-break: break-all;
+}
+
+.permissionsOfDetails table tbody td,
+.permissionsOfDetails table tbody th {
+    border-right: 1px solid #e7e9f1;
+    border-bottom: 1px solid #e7e9f1;
+    text-align: center;
+    line-height: inherit;
+}
+
+.permissionsOfDetails table tbody th {
+    color: #576b7e;
+    height: 50px;
+    padding: 6px;
+    background: #eef1f9;
+    line-height: inherit;
+}
+
+.permissionsOfDetails table tbody td {
+    padding: 4px 8px;
+}
+
+.permissionsOfDetails table tbody td>div {
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.permissionsOfDetails table tbody td>div>div.clearFloatDiv:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.permissionsOfDetails table tbody td>div>div.clearFloatDiv .floatDiv {
+    float: left;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    text-align: left;
+    font-size: 13px;
+    color: #415161;
+    margin-bottom: 5px;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.permissionsOfDetails table tbody td>div>div.clearFloatDiv .floatDiv>span {
+    padding-right: 5px;
+}
+
+.permissionsOfDetails table tbody td>div>div.clearFloatDiv .marginBottom {
+    margin-bottom: 15px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.permissionsOfDetails .ant-checkbox {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px !important;
+    padding-right: 5px;
+}
+
+
+.permissionsOfDetails .ant-checkbox-inner {
+    position: relative;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #cdd9e6;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.permissionsOfDetails .clearFloatDiv .ant-checkbox-inner {
+    position: relative;
+    top: 0px;
+    left: 6px;
+}
+
+.permissionsOfDetails table tbody td>div>div.clearFloatDiv .choice {
+    background-color: #13c19f;
+}
+
+.permissionsOfDetails .ant-checkbox-checked .ant-checkbox-inner,
+.permissionsOfDetails .ant-checkbox-indeterminate .ant-checkbox-inner {
+    border-color: #13c19f;
+}
+
+.permissionsOfDetails .ant-checkbox-input {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.permissionsOfDetails .ant-checkbox-checked .ant-checkbox-inner:after {
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    display: table;
+    width: 5px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    -webkit-transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+    transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+}
+
+/*全选start*/
+.permissionsOfDetails .selectDiv {
+    float: right;
+    width: 20px;
+}
+
+.permissionsOfDetails .ant-selectDiv {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.permissionsOfDetails .ant-selectDiv .ant-selectDivSpan {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #13c19f;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: relative;
+    top: -1px;
+}
+
+.permissionsOfDetails .ant-selectDiv .ant-selectDivSpan:after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    display: table;
+    width: 6px;
+    height: 11px;
+    border: 3px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    -webkit-transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+    transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+}
+
+.permissionsOfDetails .selectDiv .ant-selectDiv .selectDivSpanBack {
+    background-color: #13c19f;
+}
+
+.permissionsOfDetails .selectTh1 {
+    cursor: not-allowed;
+}
+
+/*全选end*/
+/*权限样式end */
