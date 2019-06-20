@@ -117,6 +117,7 @@
  + `requestPageName` 页面的名称 eg:'setMeal'              **必填项**
  + `whatRole`        要获取的权限名称eg:'see'              **必填项**
  + `roleDataStr`     要判断的所有的角色 就是role所有的数据  **非必填项**
+ 
  1、有两种使用方式在创建角色页面获取的方式
  ```
  let roleObj = new RoleDomCreate({
