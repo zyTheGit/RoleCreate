@@ -2,7 +2,6 @@
   {
     "elementChieseName": "基本设置",
     "jurisdictionName": [
-
       {
         "englishNa": "setMeal-edit",
         "chineseNa": "套餐编辑"
@@ -10,42 +9,6 @@
       {
         "englishNa": "setMeal-del",
         "chineseNa": "套餐删除"
-      },
-      {
-        "englishNa": "setMeal-see",
-        "chineseNa": "套餐查看"
-      },
-      {
-        "englishNa": "blacklist-edit",
-        "chineseNa": "黑名单编辑"
-      },
-      {
-        "englishNa": "blacklist-del",
-        "chineseNa": "黑名单删除"
-      },
-      {
-        "englishNa": "manualRelease-export",
-        "chineseNa": "手动放行导出"
-      },
-      {
-        "englishNa": "manualRelease-see",
-        "chineseNa": "手动放行查看"
-      },
-      {
-        "englishNa": "confirmEvent-see",
-        "chineseNa": "确认事件查看"
-      },
-      {
-        "englishNa": "charge-edit",
-        "chineseNa": "收费标准编辑"
-      },
-      {
-        "englishNa": "charge-del",
-        "chineseNa": "收费标准删除"
-      },
-      {
-        "englishNa": "charge-see",
-        "chineseNa": "收费标准查看"
       }
     ]
   },
@@ -80,122 +43,6 @@
       {
         "englishNa": "cityManagement-del",
         "chineseNa": "城市管理删除"
-      },
-      {
-        "englishNa": "cityManagement-see",
-        "chineseNa": "城市管理查看"
-      },
-      {
-        "englishNa": "groupManegement-edit",
-        "chineseNa": "集团管理编辑"
-      },
-      {
-        "englishNa": "groupManegement-del",
-        "chineseNa": "集团管理删除"
-      },
-      {
-        "englishNa": "groupManegement-see",
-        "chineseNa": "集团管理查看"
-      },
-      {
-        "englishNa": "yardProject-edit",
-        "chineseNa": "车场项目编辑"
-      },
-      {
-        "englishNa": "yardProject-del",
-        "chineseNa": "车场项目删除"
-      },
-      {
-        "englishNa": "yardProject-see",
-        "chineseNa": "车场项目查看"
-      },
-      {
-        "englishNa": "businessManagementMain-sync",
-        "chineseNa": "业务管理同步"
-      },
-      {
-        "englishNa": "businessManagementMain-see",
-        "chineseNa": "业务管理查看"
-      },
-      {
-        "englishNa": "terminalManagement-edit",
-        "chineseNa": "终端管理编辑"
-      },
-      {
-        "englishNa": "terminalManagement-del",
-        "chineseNa": "终端管理删除"
-      },
-      {
-        "englishNa": "terminalManagement-see",
-        "chineseNa": "终端管理查看"
-      },
-      {
-        "englishNa": "yardManagement-edit",
-        "chineseNa": "车场管理编辑"
-      },
-      {
-        "englishNa": "yardManagement-del",
-        "chineseNa": "车场管理删除"
-      },
-      {
-        "englishNa": "yardManagement-see",
-        "chineseNa": "车场管理查看"
-      },
-      {
-        "englishNa": "channelManagement-edit",
-        "chineseNa": "车道管理编辑"
-      },
-      {
-        "englishNa": "channelManagement-del",
-        "chineseNa": "车道管理删除"
-      },
-      {
-        "englishNa": "channelManagement-see",
-        "chineseNa": "车道管理查看"
-      },
-      {
-        "englishNa": "vehicleManagement-edit",
-        "chineseNa": "车辆管理编辑"
-      },
-      {
-        "englishNa": "vehicleManagement-del",
-        "chineseNa": "车辆管理删除"
-      },
-      {
-        "englishNa": "vehicleManagement-see",
-        "chineseNa": "车辆管理查看"
-      },
-      {
-        "englishNa": "vehicleManagement-recharge",
-        "chineseNa": "车辆管理充值"
-      },
-      {
-        "englishNa": "vehicleManagement-export",
-        "chineseNa": "车辆管理导出"
-      },
-      {
-        "englishNa": "vehicleManagement-bindPackage",
-        "chineseNa": "车辆管理套餐绑定"
-      },
-      {
-        "englishNa": "centralMonitoring-see",
-        "chineseNa": "中央监控查看"
-      },
-      {
-        "englishNa": "centralMonitoring-instantMess",
-        "chineseNa": "中央监控即时通讯"
-      },
-      {
-        "englishNa": "centralMonitoring-SwitchVideo",
-        "chineseNa": "中央监控切换视频"
-      },
-      {
-        "englishNa": "centralMonitoring-confirmPlate",
-        "chineseNa": "中央监控确认车牌"
-      },
-      {
-        "englishNa": "clearSetting-edit",
-        "chineseNa": "自动删除报表配置"
       }
     ]
   },
@@ -214,74 +61,6 @@
       {
         "englishNa": "cityAccount-edit",
         "chineseNa": "城市账号编辑"
-      },
-      {
-        "englishNa": "cityAccount-del",
-        "chineseNa": "城市账号删除"
-      },
-      {
-        "englishNa": "cityAccount-see",
-        "chineseNa": "城市账号查看"
-      },
-      {
-        "englishNa": "cityAccount-modifyPass",
-        "chineseNa": "城市账号密码修改"
-      },
-      {
-        "englishNa": "groupAccount-edit",
-        "chineseNa": "集团账号编辑"
-      },
-      {
-        "englishNa": "groupAccount-see",
-        "chineseNa": "集团账号查看"
-      },
-      {
-        "englishNa": "groupAccount-del",
-        "chineseNa": "集团账号删除"
-      },
-      {
-        "englishNa": "groupAccount-modifyPass",
-        "chineseNa": "集团账号密码修改"
-      },
-      {
-        "englishNa": "projectAccount-edit",
-        "chineseNa": "项目账号编辑"
-      },
-      {
-        "englishNa": "projectAccount-del",
-        "chineseNa": "项目账号删除"
-      },
-      {
-        "englishNa": "projectAccount-see",
-        "chineseNa": "项目账号查看"
-      },
-      {
-        "englishNa": "projectAccount-modifyPass",
-        "chineseNa": "项目账号密码修改"
-      },
-      {
-        "englishNa": "merchantOperator-edit",
-        "chineseNa": "商户账号编辑"
-      },
-      {
-        "englishNa": "merchantOperator-del",
-        "chineseNa": "商户账号删除"
-      },
-      {
-        "englishNa": "merchantOperator-see",
-        "chineseNa": "商户账号查看"
-      },
-      {
-        "englishNa": "merchantOperator-modifyPass",
-        "chineseNa": "商户账号密码修改"
-      },
-      {
-        "englishNa": "projectData-see",
-        "chineseNa": "项目数据查看"
-      },
-      {
-        "englishNa": "onParkVehicle-see",
-        "chineseNa": "在场车辆查看"
       }
     ]
   },
@@ -300,22 +79,6 @@
       {
         "englishNa": "merchant-recharge",
         "chineseNa": "商户充值"
-      },
-      {
-        "englishNa": "quotaVoucher-edit",
-        "chineseNa": "定额券编辑"
-      },
-      {
-        "englishNa": "quotaVoucher-del",
-        "chineseNa": "定额券删除"
-      },
-      {
-        "englishNa": "businessStatement-query",
-        "chineseNa": "商户报表查询"
-      },
-      {
-        "englishNa": "couponSendRecord-see",
-        "chineseNa": "券发放记录查看"
       }
     ]
   },
@@ -333,54 +96,6 @@
       {
         "englishNa": "monthlyRechargeRecord-see",
         "chineseNa": "月租车充值记录查看"
-      },
-      {
-        "englishNa": "monthlyRechargeRecord-export",
-        "chineseNa": "月租车充值记录导出"
-      },
-      {
-        "englishNa": "storageRechargeRecord-see",
-        "chineseNa": "储值车充值记录查看"
-      },
-      {
-        "englishNa": "storageRechargeRecord-export",
-        "chineseNa": "储值车充值记录导出"
-      },
-      {
-        "englishNa": "abnormalRecord-see",
-        "chineseNa": "异常放行记录查看"
-      },
-      {
-        "englishNa": "abnormalRecord-export",
-        "chineseNa": "异常放行记录导出"
-      },
-      {
-        "englishNa": "exitErrorRecord-see",
-        "chineseNa": "进出错误记录查看"
-      },
-      {
-        "englishNa": "exitErrorRecord-export",
-        "chineseNa": "进出错误记录导出"
-      },
-      {
-        "englishNa": "handOperation-see",
-        "chineseNa": "手动放行记录查看"
-      },
-      {
-        "englishNa": "handOperation-export",
-        "chineseNa": "手动放行记录导出"
-      },
-      {
-        "englishNa": "remoteControlGate-see",
-        "chineseNa": "远程关闸记录查看"
-      },
-      {
-        "englishNa": "remoteControlGate-export",
-        "chineseNa": "远程关闸记录导出"
-      },
-      {
-        "englishNa": "shiftRocord-export",
-        "chineseNa": "交班记录导出"
       }
     ]
   },
@@ -394,28 +109,7 @@
       {
         "englishNa": "departmentUsers-del",
         "chineseNa": "部门用户删除"
-      },
-      {
-        "englishNa": "departmentUsers-see",
-        "chineseNa": "部门用户查看"
-      },
-      {
-        "englishNa": "departmentUsers-recharge",
-        "chineseNa": "部门用户充值"
-      },
-      {
-        "englishNa": "role-edit",
-        "chineseNa": "角色编辑"
-      },
-      {
-        "englishNa": "role-del",
-        "chineseNa": "角色删除"
-      },
-      {
-        "englishNa": "role-see",
-        "chineseNa": "角色查看"
       }
-
     ]
 
   }
