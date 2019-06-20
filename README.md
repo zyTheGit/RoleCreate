@@ -64,42 +64,42 @@
 
 # 文档参数
 * `RoleJsonData` -`Array`，**JSON.stringify**必须是这个格式 **必填参数** 
-```
-[
-  {
-    "elementChieseName": "记录",
-    "jurisdictionName": [
-      {
-        "englishNa": "exitRecords-see",
-        "chineseNa": "进出记录查看"
-      },
-      {
-        "englishNa": "exitRecords-export",
-        "chineseNa": "进出记录导出"
-      },
-      {
-        "englishNa": "monthlyRechargeRecord-see",
-        "chineseNa": "月租车充值记录查看"
-      }
-    ]
-  },
-  {
-    "elementChieseName": "设置",
-    "jurisdictionName": [
-      {
-        "englishNa": "departmentUsers-edit",
-        "chineseNa": "部门用户编辑"
-      },
-      {
-        "englishNa": "departmentUsers-del",
-        "chineseNa": "部门用户删除"
-      }
-    ]
-  }
+  ```
+  [
+    {
+      "elementChieseName": "记录",
+      "jurisdictionName": [
+        {
+          "englishNa": "exitRecords-see",
+          "chineseNa": "进出记录查看"
+        },
+        {
+          "englishNa": "exitRecords-export",
+          "chineseNa": "进出记录导出"
+        },
+        {
+          "englishNa": "monthlyRechargeRecord-see",
+          "chineseNa": "月租车充值记录查看"
+        }
+      ]
+    },
+    {
+      "elementChieseName": "设置",
+      "jurisdictionName": [
+        {
+          "englishNa": "departmentUsers-edit",
+          "chineseNa": "部门用户编辑"
+        },
+        {
+          "englishNa": "departmentUsers-del",
+          "chineseNa": "部门用户删除"
+        }
+      ]
+    }
 
-]
+  ]
 
-```
+  ```
 * `RoleDomBox`            -储存角色渲染的盒子 - String , **必填参数**
 * `RoleComplateFn`        -角色创建完成的回调函数 -`Function` 非必填
 * `defaultPageRoleArray`  -固定一些默认角色-`Array` 非必填参数
