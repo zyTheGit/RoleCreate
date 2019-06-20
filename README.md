@@ -10,6 +10,10 @@
 * 移动端和pc端自适应
 * 使用方便
 * 不需要调用css，只需要引用`dest/role.bundle.js`
+* 有内置的全选和单选事件
+* 有获取所有角色状态
+* 有获取单个角色状态
+
 
 # 使用文档
 1、引用`dest/role.bundle.js`
@@ -23,12 +27,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>角色</title>
-    <script src="../dest/role.bundle.js"></script>
 </head>
 
 <body>
     <div class="roleBox"></div>
     <button id='btn'>获取状态</button>
+    <script src="../dest/role.bundle.js"></script>
     <script>
         var roleObj = null;
         fetch('./role.json').then((response) => response.json()).then(function (data) {
@@ -95,9 +99,9 @@
 ]
 
 ```
-* `RoleDomBox` -储存角色渲染的盒子 - String , **必填参数**
-* `RoleComplateFn` -角色创建完成的回调函数 -`Function` 非必填
-* `defaultPageRoleArray` -固定一些默认角色-`Array` 非必填参数
+* `RoleDomBox`            -储存角色渲染的盒子 - String , **必填参数**
+* `RoleComplateFn`        -角色创建完成的回调函数 -`Function` 非必填
+* `defaultPageRoleArray`  -固定一些默认角色-`Array` 非必填参数
     ```
     [{
         page: 'exitRecords-see',    //exitRecords-see
@@ -106,6 +110,62 @@
     ```
 
 # 返回的事件函数
-`getRoleAllStatus` 获取所有的配置角色，返回`数组对象` -`Function` 非必填
+* `getRoleAllStatus` 获取所有的配置角色，返回`数组对象` -`Function` 非必填
 
-`getOnlyPower` 获取当前角色状态，返回`true/false` -`Function` 非必填
+* `getOnlyPower`     获取当前角色状态，返回`true/false` -`Function` 非必填
+ > eg:**setMeal-see**
+ + `requestPageName` 页面的名称 eg:'setMeal'              **必填项**
+ + `whatRole`        要获取的权限名称eg:'see'              **必填项**
+ + `roleDataStr`     要判断的所有的角色 就是role所有的数据  **非必填项**
+ 1、有两种使用方式在创建角色页面获取的方式
+ ```
+ let roleObj = new RoleDomCreate({
+        RoleJsonData: JSON.stringify(data),
+        RoleDomBox: '.roleBox'
+    })
+    roleObj.init();
+    //返回true/false,角色的状态
+    let roleStatus=roleObj.getOnlyPower({
+         requestPageName: 'setMeal',
+         whatRole: 'edit'
+    })
+ ```
+ 2、第二种获取在其他页面调用，
+ >> 其实是不建议使用，为了一个获取角色状态还要引用`dest/role.bundle.js`
+ ```
+ let roleObj = new RoleDomCreate();
+ 
+  //返回true/false,角色的状态
+  let roleStatus=roleObj.getOnlyPower({
+     requestPageName: 'setMeal',
+     whatRole: 'edit',
+     roleDataStr:JSON.stringify(roleArray)
+  })
+ ```
+ **附上此方法**
+ ```
+  getOnlyPower({
+        requestPageName,
+        whatRole,
+        roleDataStr
+    }) {
+        let valueParse = !!roleDataStr && JSON.parse(roleDataStr) || this.getRoleAllStatus();
+        for (let i = 0; i < valueParse.length; i++) {
+            let pageName = valueParse[i].pageName;
+            if (pageName == requestPageName) {
+                let currentAllRole = valueParse[i].currentAllRole;
+                for (let j = 0; j < currentAllRole.length; j++) {
+                    let roleName = currentAllRole[j].roleName;
+                    let getRoleName = requestPageName + "-" + whatRole;
+                    if (roleName == getRoleName) {
+                        let status = currentAllRole[j].status;
+                        return status;
+                    }
+                }
+            }
+        }
+    }
+ ```
+ 
+ 
+ 
