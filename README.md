@@ -133,7 +133,7 @@ roleObj.Init();
 * `getRoleAllStatus` 获取所有的配置角色，返回`数组对象` -`Function` 非必填
 
 * `getOnlyPower`     获取当前角色状态，返回`true/false` -`Function` 非必填
- > eg:**setMeal-see**
+ >> eg:**setMeal-see**
  + `requestPageName` 页面的名称 eg:'setMeal'              **必填项**
  + `whatRole`        要获取的权限名称eg:'see'              **必填项**
  + `roleDataStr`     要判断的所有的角色 就是role所有的数据  **非必填项**
