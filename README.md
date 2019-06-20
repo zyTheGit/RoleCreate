@@ -18,6 +18,10 @@
 
 # 使用文档
 1、引用`dest/role.bundle.js`
+* html设置
+```
+<div class="roleBox"></div>
+```
 
 2、页面`new RoleDomCreate()`对象中有两个必填参数
  * `RoleJsonData` 你的所有角色配置json数据[RoleJsonData数据格式参考role.json](https://github.com/zyTheGit/RoleCreate/blob/master/src/role.json)
@@ -28,11 +32,10 @@
     RoleDomBox: '.roleBox'
   })
  ```
-3、在执行`Init()`
+3、在执行`Init()` **即可创建成功**
 ```
 roleObj.Init();
 ```
- **即可创建成功**
 
 # 具体使用示例
 ```
