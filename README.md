@@ -98,12 +98,12 @@
 * `RoleDomBox` -储存角色渲染的盒子 - String , **必填参数**
 * `RoleComplateFn` -角色创建完成的回调函数 -`Function` 非必填
 * `defaultPageRoleArray` -固定一些默认角色-`Array` 非必填参数
-```
-[{
-    page: 'exitRecords-see',    //exitRecords-see
-    status: true                //角色状态true/false
-}]
-```
+    ```
+    [{
+        page: 'exitRecords-see',    //exitRecords-see
+        status: true                //角色状态true/false
+    }]
+    ```
 
 # 返回的事件函数
 `getRoleAllStatus` 获取所有的配置角色，返回`数组对象` -`Function` 非必填
