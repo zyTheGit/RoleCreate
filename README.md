@@ -1,5 +1,5 @@
 # RoleCreate
-利用json创建角色
+此示例利用json文件创建角色，可以是其他
 
 ## PC端显示
 ![pc端](https://github.com/zyTheGit/RoleCreate/blob/master/src/img/pc.jpg)
