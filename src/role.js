@@ -71,17 +71,19 @@ require('./role.css');
             this._electionsAndSingle(parentDivDom);
             //选择权限
             this._choiceRole(parentDivDom);
+            //界面默认显示配置的默认角色
+            this._defaultRoleStatus();
         }
 
         //dom创建
         _renderDom(valueData, parentDivDom) {
             let _this = this,
                 doc = document,
-                divBox=doc.createElement('div'),
+                divBox = doc.createElement('div'),
                 table = doc.createElement("table"),
                 dataLen = valueData.length,
                 tbody = doc.createElement("tbody");
-                divBox.className='permissionsOfDetails';
+            divBox.className = 'permissionsOfDetails';
             table.setAttribute("onselectstart", "return false");
             for (let i = 0; i < dataLen; i++) {
                 let elementNa = valueData[i].elementChieseName; //每个页面对应的名称
@@ -116,7 +118,7 @@ require('./role.css');
                             regionDiv.className = "regionDiv";
                             regionDiv.setAttribute("data-region", inxRegion);
                             regionDiv.innerHTML = htmlRegion;
-                            _this.appendFrag(divTwo, regionDiv);
+                            _this._appendFrag(divTwo, regionDiv);
                             lastName = name;
                             divTwo.appendChild(p);
                             divFirst.appendChild(divTwo);
@@ -134,7 +136,7 @@ require('./role.css');
                             regionDiv.className = "regionDiv";
                             regionDiv.setAttribute("data-region", inxRegion);
                             regionDiv.innerHTML = htmlRegion;
-                            _this.appendFrag(divTwo, regionDiv);
+                            _this._appendFrag(divTwo, regionDiv);
                             lastName = name;
                             divFirst.appendChild(divTwo);
                             th.innerHTML = elementNa + '<div class="selectDiv"><span><label class="ant-checkbox-wrapper"><span class="ant-selectDiv"><span class="ant-selectDivSpan" style="border: 1px solid rgb(19, 193, 159); cursor: pointer;"></span><input type="checkbox" class="ant-checkbox-input" spellcheck="false" style="cursor: pointer;"></span></label></span></div>';
@@ -165,17 +167,17 @@ require('./role.css');
                             innerInput = td.querySelectorAll(".ant-checkbox-inner"),
                             seleSpan = th.querySelector(".ant-selectDivSpan"),
                             innerInLen = innerInput.length;
-                        if (_this.hasClass(seleSpan, "selectDivSpanBack")) {
-                            _this.removeClass(seleSpan, "selectDivSpanBack");
+                        if (_this._hasClass(seleSpan, "selectDivSpanBack")) {
+                            _this._removeClass(seleSpan, "selectDivSpanBack");
                             for (let k = 0; k < innerInLen; k++) {
                                 if (k == innerInLen) return false;
-                                _this.removeClass(innerInput[k], "choice");
+                                _this._removeClass(innerInput[k], "choice");
                             }
                         } else {
-                            _this.addClass(seleSpan, "selectDivSpanBack");
+                            _this._addClass(seleSpan, "selectDivSpanBack");
                             for (let k = 0; k < innerInLen; k++) {
                                 if (k == innerInLen) return false;
-                                _this.addClass(innerInput[k], "choice");
+                                _this._addClass(innerInput[k], "choice");
                             }
                         }
                     })
@@ -190,23 +192,21 @@ require('./role.css');
             for (let i = 0, floatDivLen = floatDiv.length; i < floatDivLen; i++) {
                 floatDiv[i].addEventListener("click", function () {
                     let floatThis = this;
-                    if (!_this.hasClass(floatThis, "floatDiv1")) {
+                    if (!_this._hasClass(floatThis, "floatDiv1")) {
                         let choice = floatThis.querySelectorAll(".choice");
                         let tr = floatThis.offsetParent.parentNode;
                         let th = tr.firstChild;
                         let seleSpan = th.querySelector(".ant-selectDivSpan");
                         if (choice.length > 0) {
-                            _this.removeClass(choice[0], "choice");
-                            _this.removeClass(seleSpan, "selectDivSpanBack");
+                            _this._removeClass(choice[0], "choice");
+                            _this._removeClass(seleSpan, "selectDivSpanBack");
                             return;
                         } else {
                             let olbCheckboxLen = tr.querySelectorAll(".ant-checkbox-inner").length;
                             let checkboxInner = floatThis.querySelector(".ant-checkbox-inner");
-                            _this.addClass(checkboxInner, "choice");
+                            _this._addClass(checkboxInner, "choice");
                             let newChoiceLen = tr.querySelectorAll(".choice").length;
-                            if (olbCheckboxLen == newChoiceLen) {
-                                _this.addClass(seleSpan, "selectDivSpanBack");
-                            }
+                            (olbCheckboxLen == newChoiceLen) && _this._addClass(seleSpan, "selectDivSpanBack");
                             return;
                         }
                     }
@@ -214,7 +214,7 @@ require('./role.css');
             }
         }
 
-        appendFrag(parent, text) {
+        _appendFrag(parent, text) {
             if (typeof text === 'string') {
                 let temp = document.createElement('div');
                 temp.innerHTML = text;
@@ -230,19 +230,33 @@ require('./role.css');
             }
         }
 
-        hasClass(ele, cls) {
+        _hasClass(ele, cls) {
             return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
         }
 
-        addClass(elements, cName) {
+        _addClass(elements, cName) {
             if (elements.className == "") {
                 elements.className += cName;
             } else {
                 elements.className += " " + cName;
             }
+            return true;
         }
-        removeClass(elements, cName) {
+        _removeClass(elements, cName) {
             elements.className = elements.className.replace(new RegExp("(\\s|^)" + cName + "(\\s|$)"), "")
+        }
+
+        //默认初始角色
+        _defaultRoleStatus() {
+            let _this = this;
+            this.defaultPageRoleArray.length > 0 && this.defaultPageRoleArray.forEach(item => {
+                if (!!item.page) {
+                    let status = !!item.status || true,
+                        oSpan = document.getElementById(item.page);
+                    status && _this._addClass(oSpan, 'choice') || _this._removeClass(oSpan, 'choice');
+                    oSpan = null;
+                }
+            })
         }
 
         //获取角色状态
@@ -254,7 +268,7 @@ require('./role.css');
             let currentName = spanAll[0].getAttribute("id").split("-")[0];
             for (let i = 0; i < spanAll.length; i++) {
                 let spanElement = spanAll[i];
-                let status = this.hasClass(spanElement, "choice") ? true : false;
+                let status = this._hasClass(spanElement, "choice") ? true : false;
                 let spanId = spanElement.getAttribute("id");
                 let spanIdName = spanId.split("-")[0];
                 if (currentName == spanIdName) {
@@ -283,50 +297,17 @@ require('./role.css');
             return arrayData;
         }
 
-        /**
-         * 后续添加的角色权限，需要默认
-         * @param {pageName,forPageName} param
-         * 1.判断默认数据是否在defaultArray函数中
-         * 2.判断值是否已存在数据库中
-         */
-        SubsequentDefault(param) {
-            let status = false;
-            let arrayPageName = this.defaultPageRoleArray;
-            for (let i = 0; i < arrayPageName.length; i++) {
-                if (arrayPageName[i] == param.pageName) {
-                    status = true;
-                    break;
-                }
-            }
-            if (param.pageName == param.forPageName && status) {
-                //值在列表中显示为true
-                return true;
-            }
-            return status;
-        }
-
-        //显示对应状态
-        defaultArrayObj() {
-            let array = this.defaultPageRoleArray;
-            let arrayObj = [];
-            for (let i = 0; i < array.length; i++) {
-                arrayObj.push({
-                    page: array[i].page,
-                    status: array[i].status || true
-                });
-            }
-            return arrayObj;
-        }
-
         //根据页面获取单个角色状态
-        //requestPageName改页面的名称，whatRole是页面对应权限
+        //requestPageName改页面的名称
+        //whatRole是页面对应权限
+        //roleDataStr角色数据Array,必须转JSON.stringify
+        //defaultStatus 默认不存在的角色返回false
         getOnlyPower({
             requestPageName,
             whatRole,
-            roleData
+            roleDataStr
         }) {
-            let valueParse = roleData || this.getRoleAllStatus();
-            let valueExists = false;//值不在角色json中需要默认值
+            let valueParse = !!roleDataStr && JSON.parse(roleDataStr) || this.getRoleAllStatus();
             for (let i = 0; i < valueParse.length; i++) {
                 let pageName = valueParse[i].pageName;
                 if (pageName == requestPageName) {
@@ -334,15 +315,9 @@ require('./role.css');
                     for (let j = 0; j < currentAllRole.length; j++) {
                         let roleName = currentAllRole[j].roleName;
                         let getRoleName = requestPageName + "-" + whatRole;
-                        let param = { pageName: getRoleName, forPageName: roleName };
-                        valueExists = this.SubsequentDefault(param);
                         if (roleName == getRoleName) {
                             let status = currentAllRole[j].status;
                             return status;
-                        }
-                        if (j == currentAllRole.length - 1 && i == valueParse.length - 1 && !valueExists) {
-                            //数据查询完字段不存在在列表中
-                            return true;
                         }
                     }
                 }
