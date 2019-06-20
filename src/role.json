@@ -22,14 +22,6 @@
       {
         "englishNa": "program-Close",
         "chineseNa": "关闸"
-      },
-      {
-        "englishNa": "program-restart",
-        "chineseNa": "重启"
-      },
-       {
-        "englishNa": "Quick-loading",
-        "chineseNa": "快速加车"
       }
     ]
   },
@@ -45,73 +37,5 @@
         "chineseNa": "城市管理删除"
       }
     ]
-  },
-  {
-
-    "elementChieseName": "账户管理",
-    "jurisdictionName": [
-      {
-        "englishNa": "superTubeAccount-see",
-        "chineseNa": "超管账号查看"
-      },
-      {
-        "englishNa": "superTubeAccount-edit",
-        "chineseNa": "超管账号编辑"
-      },
-      {
-        "englishNa": "cityAccount-edit",
-        "chineseNa": "城市账号编辑"
-      }
-    ]
-  },
-   {
-    "elementChieseName": "优惠券管理",
-    "jurisdictionName": [
-
-      {
-        "englishNa": "merchant-edit",
-        "chineseNa": "商户编辑"
-      },
-      {
-        "englishNa": "merchant-del",
-        "chineseNa": "商户删除"
-      },
-      {
-        "englishNa": "merchant-recharge",
-        "chineseNa": "商户充值"
-      }
-    ]
-  },
-  {
-    "elementChieseName": "记录",
-    "jurisdictionName": [
-      {
-        "englishNa": "exitRecords-see",
-        "chineseNa": "进出记录查看"
-      },
-      {
-        "englishNa": "exitRecords-export",
-        "chineseNa": "进出记录导出"
-      },
-      {
-        "englishNa": "monthlyRechargeRecord-see",
-        "chineseNa": "月租车充值记录查看"
-      }
-    ]
-  },
-  {
-    "elementChieseName": "设置",
-    "jurisdictionName": [
-      {
-        "englishNa": "departmentUsers-edit",
-        "chineseNa": "部门用户编辑"
-      },
-      {
-        "englishNa": "departmentUsers-del",
-        "chineseNa": "部门用户删除"
-      }
-    ]
-
   }
-
 ]
