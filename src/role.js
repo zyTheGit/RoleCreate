@@ -77,10 +77,12 @@ require('./role.css');
         _renderDom(valueData, parentDivDom) {
             let _this = this,
                 doc = document,
+                divBox=doc.createElement('div'),
                 table = doc.createElement("table"),
-                dataLen = valueData.length;
+                dataLen = valueData.length,
+                tbody = doc.createElement("tbody");
+                divBox.className='permissionsOfDetails';
             table.setAttribute("onselectstart", "return false");
-            let tbody = doc.createElement("tbody");
             for (let i = 0; i < dataLen; i++) {
                 let elementNa = valueData[i].elementChieseName; //每个页面对应的名称
                 let jurisdictionNa = valueData[i].jurisdictionName; //每个页面对应的权限（数组）
@@ -145,7 +147,8 @@ require('./role.css');
                 tbody.appendChild(tr);
             }
             table.appendChild(tbody);
-            parentDivDom.appendChild(table);
+            divBox.appendChild(table);
+            parentDivDom.appendChild(divBox);
             this.RoleComplateFn && this.RoleComplateFn();
         }
 

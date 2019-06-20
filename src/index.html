@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="permissionsOfDetails"></div>
+    <div class="roleBox"></div>
     <button id='btn'>获取状态</button>
     <script>
         var roleObj = null;
         fetch('./role.json').then((response) => response.json()).then(function (data) {
             roleObj = new RoleDomCreate({
                 RoleJsonData: JSON.stringify(data),
-                RoleDomBox: '.permissionsOfDetails',
+                RoleDomBox: '.roleBox',
                 RoleComplateFn: function () {
                     //role创建完成的成功回调
                     // console.log(roleObj.getRoleAllStatus());
