@@ -1,9 +1,9 @@
 # RoleCreate
 利用json创建角色
 
-##PC端显示
+## PC端显示
 ![pc端](https://github.com/zyTheGit/RoleCreate/blob/master/src/img/pc.jpg)
-##移动端显示
+## 移动端显示
 ![移动端](https://github.com/zyTheGit/RoleCreate/blob/master/src/img/moble.jpg)
 
 # 适用范围和优势
