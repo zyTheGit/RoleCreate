@@ -18,6 +18,7 @@
 
 # 使用文档
 1、引用`dest/role.bundle.js`
+
 2、页面`new RoleDomCreate()`对象，再执行`Init()`初始化即可
 ```
 <!DOCTYPE html>
