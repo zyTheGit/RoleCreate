@@ -19,7 +19,22 @@
 # 使用文档
 1、引用`dest/role.bundle.js`
 
-2、页面`new RoleDomCreate()`对象，再执行`Init()`初始化即可
+2、页面`new RoleDomCreate()`对象中有两个必填参数
+ * `RoleJsonData` 你的所有角色配置json数据(RoleJsonData数据格式参考role.json)[https://github.com/zyTheGit/RoleCreate/blob/master/src/role.json]
+ * `RoleDomBox` 你的装角色容器
+ ```
+ let roleObj = new RoleDomCreate({
+    RoleJsonData: JSON.stringify(data),
+    RoleDomBox: '.roleBox'
+  })
+ ```
+3、在执行`Init()`
+```
+roleObj.Init();
+```
+ **即可创建成功**
+
+# 具体使用示例
 ```
 <!DOCTYPE html>
 <html lang="en">
