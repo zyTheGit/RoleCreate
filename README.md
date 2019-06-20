@@ -178,10 +178,7 @@ roleObj.Init();
                 for (let j = 0; j < currentAllRole.length; j++) {
                     let roleName = currentAllRole[j].roleName;
                     let getRoleName = requestPageName + "-" + whatRole;
-                    if (roleName == getRoleName) {
-                        let status = currentAllRole[j].status;
-                        return status;
-                    }
+                    if (roleName == getRoleName)return currentAllRole[j].status;
                 }
             }
         }
