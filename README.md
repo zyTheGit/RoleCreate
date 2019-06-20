@@ -8,7 +8,8 @@
 
 # 适用范围和优势
 * 移动端和pc端自适应
-* 使用方便
+* 可以使用import或者window.RoleCreate获取
+* 使用方便,文件体积小
 * 不需要调用css，只需要引用`dest/role.bundle.js`
 * 有内置的全选和单选事件
 * 有获取所有角色状态
