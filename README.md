@@ -9,6 +9,7 @@
 # 适用范围和优势
 * 移动端和pc端自适应
 * 使用方便
+* 不需要调用css，只需要引用`dest/role.bundle.js`
 
 # 使用文档
 1、引用`dest/role.bundle.js`
